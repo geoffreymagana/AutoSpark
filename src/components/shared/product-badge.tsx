@@ -1,6 +1,8 @@
 
+"use client";
+
 import { cn } from "@/lib/utils";
-import { Flame, Star, XCircle, Percent } from "lucide-react";
+import { Flame, Star, XCircle, ArrowDown } from "lucide-react";
 
 interface ProductBadgeProps {
   status: string;
@@ -26,7 +28,7 @@ export default function ProductBadge({ status, discount }: ProductBadgeProps) {
     },
     discount: {
       label: `${discount}% OFF`,
-      icon: Percent,
+      icon: ArrowDown,
       className: 'bg-primary text-white',
     },
   }[status];
