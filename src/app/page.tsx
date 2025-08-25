@@ -33,7 +33,7 @@ function LogoMarquee() {
           </div>
         ))}
       </div>
-      <div className="flex absolute top-0 animate-marquee whitespace-nowrap" style={{ animationDelay: "-12.5s" }}>
+      <div className="flex absolute top-0 animate-marquee-rtl whitespace-nowrap">
         {extendedLogos.map((logo, index) => (
           <div key={`clone-${index}`} className="flex-shrink-0 w-48 h-24 flex items-center justify-center mx-8 text-primary-foreground">
             <logo.src className="w-auto h-10" />
@@ -50,7 +50,7 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
         <Image
-          src="/images/main/car engine.jpg"
+          src="/images/main/Car Engine.jpg"
           alt="Car Engine"
           fill
           className="absolute z-0 brightness-50 object-cover"
@@ -159,10 +159,9 @@ export default function Home() {
                         <p className="text-neutral-300 italic">"{testimonial.quote}"</p>
                       </CardContent>
                       <div className="p-6 pt-0 flex items-center gap-4">
-                        <Avatar>
-                          <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.aiHint} />
-                          <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                        </Avatar>
+                        <div className="relative h-10 w-10 shrink-0">
+                          <Image src={testimonial.image} alt={testimonial.name} className="object-contain" fill data-ai-hint={testimonial.aiHint} />
+                        </div>
                         <div>
                           <p className="font-bold">{testimonial.name}</p>
                           <p className="text-sm text-neutral-400">{testimonial.vehicle}</p>

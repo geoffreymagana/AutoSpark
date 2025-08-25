@@ -1,8 +1,9 @@
+
 "use client"
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-export default function TermsAndConditionsPage() {
+function TermsAndConditionsContent() {
   const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
@@ -25,11 +26,12 @@ export default function TermsAndConditionsPage() {
         }
         
         .terms-content a {
-          text-decoration: underline;
+          text-decoration: underline !important;
+          color: hsl(var(--primary));
         }
         
         .terms-content a:hover {
-          text-decoration: underline;
+          color: hsl(var(--primary));
         }
       `}</style>
       
@@ -41,7 +43,7 @@ export default function TermsAndConditionsPage() {
           <p className="mt-2 text-lg text-neutral-400">Last Updated: {currentDate}</p>
         </header>
 
-        <div className="terms-content prose prose-invert prose-lg mx-auto text-neutral-300 prose-h2:text-primary prose-h2:font-bold prose-a:text-primary hover:prose-a:text-accent">
+        <div className="terms-content prose prose-invert prose-lg mx-auto text-neutral-300 prose-h2:text-primary prose-h2:font-bold prose-a:text-primary prose-a:underline hover:prose-a:text-primary">
           <p>Welcome to AutoSpark!</p>
           
           <p>
@@ -103,4 +105,9 @@ export default function TermsAndConditionsPage() {
       </div>
     </>
   );
+}
+
+
+export default function TermsAndConditionsPage() {
+    return <TermsAndConditionsContent />;
 }

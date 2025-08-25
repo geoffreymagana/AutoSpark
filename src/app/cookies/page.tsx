@@ -1,8 +1,9 @@
+
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function CookiePolicyPage() {
+function CookiePolicyContent() {
   const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
@@ -12,34 +13,13 @@ export default function CookiePolicyPage() {
   return (
     <>
       <style jsx>{`
-        .cookie-content h2 {
-          font-weight: bold;
-          margin-top: 2rem;
-          margin-bottom: 1rem;
-        }
-
-        .cookie-content p,
-        .cookie-content ul {
-          margin-bottom: 1.5rem;
-          line-height: 1.6;
-        }
-
-        .cookie-content li {
-          margin-bottom: 1rem;
-        }
-
         .cookie-content a {
           text-decoration: underline !important;
-          display: inline;
+          color: hsl(var(--primary));
         }
 
         .cookie-content a:hover {
-          text-decoration: underline !important;
-          display: inline;
-        }
-
-        .cookie-content strong {
-          font-weight: bold;
+          color: hsl(var(--primary));
         }
       `}</style>
 
@@ -53,7 +33,7 @@ export default function CookiePolicyPage() {
           </p>
         </header>
 
-        <div className="cookie-content prose prose-invert prose-lg mx-auto text-neutral-300 prose-h2:text-primary prose-h2:font-bold prose-a:text-primary hover:prose-a:text-accent">
+        <div className="cookie-content prose prose-invert prose-lg mx-auto text-neutral-300 prose-h2:text-primary prose-h2:font-bold prose-a:text-primary prose-a:underline hover:prose-a:text-primary">
           <p>
             This is the Cookie Policy for AutoSpark, accessible from{" "}
             <Link href="/">https://auto-spark.vercel.app/</Link>.
@@ -156,4 +136,9 @@ export default function CookiePolicyPage() {
       </div>
     </>
   );
+}
+
+
+export default function CookiePolicyPage() {
+  return <CookiePolicyContent />;
 }

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -85,39 +86,41 @@ export default function ContactPage() {
             </div>
              <div>
                 <h2 className="text-3xl font-bold mb-6">Our Location</h2>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <div className="aspect-video w-full rounded-md overflow-hidden border-2 border-primary/50 relative cursor-pointer">
-                          <Image src="/images/map/Kenya Map.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
-                          {/* Invisible center dot for precise tooltip positioning */}
-                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 opacity-0" />
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent 
-                      side="top" 
-                      align="center"
-                      sideOffset={10}
-                      className="p-0 border-primary bg-background/80 backdrop-blur-sm"
-                    >
-                      <div className="w-64 text-center">
-                        <Image src="/images/main/Headquarters.jpg" width={600} height={400} alt="AutoSpark Shop HeadQuarters" className="w-full h-auto rounded-t-md" data-ai-hint="white suv" />
-                        <div className="p-4">
-                          <div className="flex justify-center mb-2">
-                              {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                              ))}
+                <div className="relative aspect-video w-full rounded-md overflow-hidden border-2 border-primary/50">
+                    <Image src="/images/map/kenya map.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <MapPin className="w-8 h-8 text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] animate-pulse" style={{ stroke: 'hsl(var(--primary))', strokeWidth: 1.5, fill: 'hsl(var(--background))' }}/>
+                           </div>
+                        </TooltipTrigger>
+                        <TooltipContent 
+                          side="top" 
+                          align="center"
+                          sideOffset={10}
+                          className="p-0 border-primary bg-background/80 backdrop-blur-sm"
+                        >
+                          <div className="w-64 text-center">
+                            <Image src="/images/main/headquarters.jpg" width={600} height={400} alt="AutoSpark Shop HeadQuarters" className="w-full h-auto rounded-t-md" data-ai-hint="white suv" />
+                            <div className="p-4">
+                              <div className="flex justify-center mb-2">
+                                  {[...Array(5)].map((_, i) => (
+                                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                                  ))}
+                              </div>
+                              <p className="font-bold">Head Office: 123 Ngong Road</p>
+                              <p>Nairobi, Kenya</p>
+                            </div>
                           </div>
-                          <p className="font-bold">Head Office: 123 Ngong Road</p>
-                          <p>Nairobi, Kenya</p>
-                        </div>
-                      </div>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                </div>
             </div>
         </div>
       </div>
     </div>
   );
 }
+

@@ -1,14 +1,15 @@
+
 "use client"
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-export default function PrivacyPolicyPage() {
+function PrivacyPolicyContent() {
   const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
     setCurrentDate(new Date().toLocaleDateString());
   }, []);
-
+  
   return (
     <>
       <style jsx>{`
@@ -26,10 +27,11 @@ export default function PrivacyPolicyPage() {
         
         .privacy-content a {
           text-decoration: underline !important;
+          color: hsl(var(--primary));
         }
         
         .privacy-content a:hover {
-          text-decoration: underline !important;
+          color: hsl(var(--primary));
         }
       `}</style>
       
@@ -41,7 +43,7 @@ export default function PrivacyPolicyPage() {
           <p className="mt-2 text-lg text-neutral-400">Last Updated: {currentDate}</p>
         </header>
 
-        <div className="privacy-content prose prose-invert prose-lg mx-auto text-neutral-300 prose-h2:text-primary prose-h2:font-bold prose-a:text-primary hover:prose-a:text-accent">
+        <div className="privacy-content prose prose-invert prose-lg mx-auto text-neutral-300 prose-h2:text-primary prose-h2:font-bold prose-a:text-primary prose-a:underline hover:prose-a:text-primary">
           <p>
             At AutoSpark, accessible from{' '}
             <Link href="/">https://auto-spark.vercel.app/</Link>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by AutoSpark and how we use it.
@@ -103,4 +105,8 @@ export default function PrivacyPolicyPage() {
       </div>
     </>
   );
+}
+
+export default function PrivacyPolicyPage() {
+    return <PrivacyPolicyContent />;
 }
