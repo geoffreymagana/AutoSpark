@@ -41,7 +41,7 @@ export default function CartPage() {
           <ShoppingCart className="w-24 h-24 text-neutral-600 mx-auto mb-4" />
           <p className="text-2xl font-bold mb-2">Your cart is empty</p>
           <p className="text-neutral-400 mb-8">Looks like you haven't added anything to your cart yet.</p>
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="text-white">
             <Link href="/products">Start Shopping</Link>
           </Button>
         </div>

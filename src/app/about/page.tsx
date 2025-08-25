@@ -50,7 +50,7 @@ export default function AboutPage() {
         </div>
         <div className="relative h-80 rounded-lg overflow-hidden shadow-2xl">
            <Image
-            src="https://placehold.co/800x600.png"
+            src="/images/main/workshop.png"
             alt="AutoSpark workshop"
             fill
             className="object-cover"

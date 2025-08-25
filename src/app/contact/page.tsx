@@ -90,12 +90,12 @@ export default function ContactPage() {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="aspect-video w-full rounded-md overflow-hidden border-2 border-primary/50">
-                          <Image src="https://placehold.co/800x450.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
+                          <Image src="/images/map/Kenya-Map.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="p-0 border-primary bg-background/80 backdrop-blur-sm">
                       <div className="w-64 text-center">
-                        <Image src="https://placehold.co/600x400.png" width={600} height={400} alt="AutoSpark Shop" className="w-full h-auto rounded-t-md" data-ai-hint="white suv" />
+                        <Image src="/images/main/Headquarters.png" width={600} height={400} alt="AutoSpark Shop" className="w-full h-auto rounded-t-md" data-ai-hint="white suv" />
                         <div className="p-4">
                           <div className="flex justify-center mb-2">
                               {[...Array(5)].map((_, i) => (
@@ -115,4 +115,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

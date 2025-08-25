@@ -14,6 +14,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import LogoIpsum1Icon from '@/components/icons/logoipsum-1-icon';
+import LogoIpsum2Icon from '@/components/icons/logoipsum-2-icon';
+import LogoIpsum3Icon from '@/components/icons/logoipsum-3-icon';
+import LogoIpsum4Icon from '@/components/icons/logoipsum-4-icon';
+import LogoIpsum5Icon from '@/components/icons/logoipsum-5-icon';
+import LogoIpsum6Icon from '@/components/icons/logoipsum-6-icon';
 
 function LogoMarquee() {
   const extendedLogos = [...logos, ...logos]; // Duplicate for a seamless loop
@@ -38,11 +44,11 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
         <Image
-          src="https://placehold.co/1920x1080.png"
-          alt="High-performance car"
+          src="/images/main/Car-Engine.png"
+          alt="Car Engine"
           fill
           className="absolute z-0 brightness-50 object-cover"
-          data-ai-hint="sports car"
+          data-ai-hint="car engine"
         />
         <div className="relative z-10 p-4">
           <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter font-headline">
@@ -52,7 +58,7 @@ export default function Home() {
             Your ultimate source for premium auto parts and expert car services. We fuel your passion for driving.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <Button asChild size="lg" className="font-bold text-lg">
+            <Button asChild size="lg" className="font-bold text-lg text-white">
               <Link href="/products">Shop Parts <ArrowRight /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-bold text-lg bg-black/20 backdrop-blur-sm">
@@ -161,8 +167,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
           </Carousel>
         </div>
       </section>
