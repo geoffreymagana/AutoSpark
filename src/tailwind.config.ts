@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -85,21 +86,27 @@ export default {
             height: '0',
           },
         },
-        'pulse-whatsapp': {
-          '0%, 100%': {
-            transform: 'scale(1)',
-            boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.7)',
-          },
-          '70%': {
-            transform: 'scale(1.05)',
-            boxShadow: '0 0 0 10px rgba(37, 211, 102, 0)',
-          },
+        'ping-slow': {
+          '75%, 100%': {
+            transform: 'scale(1.8)',
+            opacity: '0',
+          }
         },
+        'marquee-infinite': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+         'marquee-rtl': {
+          '0%': { backgroundPosition: '0% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'pulse-whatsapp': 'pulse-whatsapp 2s infinite',
+        'ping-slow': 'ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'marquee-infinite': 'marquee-infinite 40s linear infinite',
+        'marquee-rtl': 'marquee-rtl 40s linear infinite',
       },
     },
   },
