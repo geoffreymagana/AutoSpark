@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Star } from "lucide-react";
-import Image from "next.js";
+import Image from "next/image";
 import {
   Tooltip,
   TooltipContent,
@@ -89,7 +89,7 @@ export default function ContactPage() {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="aspect-video w-full rounded-md overflow-hidden border-2 border-primary/50 relative cursor-pointer">
-                          <Image src="/images/map/Kenya map.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
+                          <Image src="/images/map/Kenya Map.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
                           {/* Invisible center dot for precise tooltip positioning */}
                           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 opacity-0" />
                       </div>
