@@ -38,7 +38,7 @@ export default function ProductBadge({ status, discount }: ProductBadgeProps) {
   return (
     <div
       className={cn(
-        "flex items-center gap-1.5 text-xs font-bold uppercase px-2 py-1 rounded-full shadow-lg",
+        "flex items-center gap-1.5 text-xs font-bold uppercase px-2 py-1 rounded-md shadow-lg",
         className
       )}
     >
