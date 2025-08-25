@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -10,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Star } from "lucide-react";
-import Image from "next/image";
+import Image from "next.js";
 import {
   Tooltip,
   TooltipContent,
@@ -89,13 +88,20 @@ export default function ContactPage() {
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <div className="aspect-video w-full rounded-md overflow-hidden border-2 border-primary/50">
-                          <Image src="/images/map/Kenya-Map.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
+                      <div className="aspect-video w-full rounded-md overflow-hidden border-2 border-primary/50 relative cursor-pointer">
+                          <Image src="/images/map/Kenya map.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
+                          {/* Invisible center dot for precise tooltip positioning */}
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 opacity-0" />
                       </div>
                     </TooltipTrigger>
-                    <TooltipContent className="p-0 border-primary bg-background/80 backdrop-blur-sm">
+                    <TooltipContent 
+                      side="top" 
+                      align="center"
+                      sideOffset={10}
+                      className="p-0 border-primary bg-background/80 backdrop-blur-sm"
+                    >
                       <div className="w-64 text-center">
-                        <Image src="/images/main/Headquarters.png" width={600} height={400} alt="AutoSpark Shop" className="w-full h-auto rounded-t-md" data-ai-hint="white suv" />
+                        <Image src="/images/main/Headquarters.jpg" width={600} height={400} alt="AutoSpark Shop HeadQuarters" className="w-full h-auto rounded-t-md" data-ai-hint="white suv" />
                         <div className="p-4">
                           <div className="flex justify-center mb-2">
                               {[...Array(5)].map((_, i) => (
