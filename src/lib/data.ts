@@ -40,7 +40,7 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  { id: 1, name: 'Performance Air Filter', price: 7999, category: 'Engine', make: 'BMW', model: 'M3', status: 'new', discount: 0, image: '/images/products/air-filter.png', aiHint: 'air filter', description: "Enhance your engine's breathing with this high-flow performance air filter. Designed for maximum airflow and superior filtration, it's a simple upgrade for noticeable gains in horsepower and throttle response.", specs: [{name: 'Material', value: 'Cotton Gauze'}, {name: 'Washable', value: 'Yes'}], relatedProducts: [5, 9] },
+  { id: 1, name: 'Performance Air Filter', price: 7999, category: 'Engine', make: 'BMW', model: 'M3', status: 'new', discount: 0, image: '/images/products/air filter.png', aiHint: 'air filter', description: "Enhance your engine's breathing with this high-flow performance air filter. Designed for maximum airflow and superior filtration, it's a simple upgrade for noticeable gains in horsepower and throttle response.", specs: [{name: 'Material', value: 'Cotton Gauze'}, {name: 'Washable', value: 'Yes'}], relatedProducts: [5, 9] },
   { id: 2, name: 'Ceramic Brake Pads', price: 12999, category: 'Brakes', make: 'Audi', model: 'S4', status: 'popular', discount: 15, image: '/images/products/brake-pads.png', aiHint: 'brake pads', description: "Upgrade your stopping power with these low-dust ceramic brake pads. They offer excellent bite, reduced brake fade, and quiet operation, making them perfect for spirited street driving.", specs: [{name: 'Compound', value: 'Ceramic'}, {name: 'Hardware', value: 'Included'}], relatedProducts: [6] },
   { id: 3, name: 'All-Season Performance Tires', price: 24999, category: 'Tires', make: 'All', model: 'All', status: 'popular', discount: 0, image: '/images/products/tyre.png', aiHint: 'car tire', description: "The perfect balance of all-weather grip and high-performance handling. These tires provide confident traction in wet and dry conditions without sacrificing cornering stability.", specs: [{name: 'Type', value: 'All-Season'}, {name: 'Treadwear', value: '500'}], relatedProducts: [7] },
   { id: 4, name: 'Full Synthetic Motor Oil', price: 4550, category: 'Engine', make: 'All', model: 'All', status: 'none', discount: 0, image: '/images/products/motor-oil.png', aiHint: 'motor oil', description: "Protect your engine with our most advanced full synthetic motor oil. Formulated for high-performance engines, it provides exceptional wear protection, and stability under extreme temperatures.", specs: [{name: 'Viscosity', value: '5W-30'}, {name: 'Size', value: '5 Litre'}], relatedProducts: [1, 5] },
@@ -57,10 +57,10 @@ export const products: Product[] = [
 export const featuredProducts = products.filter(p => p.status === 'popular' || p.status === 'new').slice(0, 4);
 
 export const teamMembers = [
-    { id: 1, name: 'John "Sparky" Doe', role: 'Founder & Master Technician', image: '/images/team/male-portrait.png', aiHint: 'male portrait' },
-    { id: 2, name: 'Jane "Gearhead" Smith', role: 'Performance Tuning Specialist', image: '/images/team/female-portrait.png', aiHint: 'female portrait' },
-    { id: 3, name: 'Mike "Rims" Johnson', role: 'Wheel & Tire Expert', image: '/images/team/male-mechanic.png', aiHint: 'male mechanic' },
-    { id: 4, name: 'Sarah "Circuit" Williams', role: 'Customer Service Manager', image: '/images/team/female-professional.png', aiHint: 'female professional' },
+    { id: 1, name: 'John "Sparky" Doe', role: 'Founder & Master Technician', image: '/images/team/John Doe.png', aiHint: 'male portrait' },
+    { id: 2, name: 'Jane "Gearhead" Smith', role: 'Performance Tuning Specialist', image: '/images/team/Jane Smith.png', aiHint: 'female portrait' },
+    { id: 3, name: 'Mike "Rims" Johnson', role: 'Wheel & Tire Expert', image: '/images/team/Mike Rims.png', aiHint: 'male mechanic' },
+    { id: 4, name: 'Sarah "Circuit" Williams', role: 'Customer Service Manager', image: '/images/team/Sarah Williams.png', aiHint: 'female professional' },
 ]
 
 export const pricingTiers = [
@@ -84,11 +84,11 @@ export const carModels = {
 export const productCategories = ['All', 'Engine', 'Brakes', 'Tires', 'Suspension', 'Lighting', 'Interior', 'Body', 'Exhaust'];
 
 export const testimonials = [
-  { id: 1, name: 'Alex Mwangi', vehicle: 'Subaru WRX STI', quote: "The performance tune I got from AutoSpark completely transformed my car. The team is incredibly knowledgeable and passionate. Highly recommended!", rating: 5, image: '/images/team/happy-man.png', aiHint: 'happy man' },
-  { id: 2, name: 'Brenda Chepkoech', vehicle: 'BMW M3', quote: "Found the exact brake pads I was looking for, and at a great price. The website is easy to use and shipping was fast. Will be back for more parts!", rating: 5, image: '/images/team/smiling-woman.png', aiHint: 'smiling woman' },
+  { id: 1, name: 'Alex Mwangi', vehicle: 'Subaru WRX STI', quote: "The performance tune I got from AutoSpark completely transformed my car. The team is incredibly knowledgeable and passionate. Highly recommended!", rating: 5, image: '/images/team/subaru-logo-2019-download.png', aiHint: 'happy man' },
+  { id: 2, name: 'Brenda Chepkoech', vehicle: 'BMW M3', quote: "Found the exact brake pads I was looking for, and at a great price. The website is easy to use and shipping was fast. Will be back for more parts!", rating: 5, image: '/images/team/bmw-logo-2020-gray-download.png', aiHint: 'smiling woman' },
   { id: 3, name: 'David Ochieng', vehicle: 'Ford Mustang', quote: "The customer service is top-notch. They helped me pick the right exhaust system and the installation was flawless. My Mustang sounds amazing now!", rating: 5, image: '/images/team/man-with-car.png', aiHint: 'man with car' },
-  { id: 4, name: 'Fatuma Ali', vehicle: 'Audi S4', quote: "I love the new coilovers. The ride is firm but comfortable, and the car handles like it's on rails. Thanks to the AutoSpark team for the great advice.", rating: 4, image: '/images/team/woman-driver.png', aiHint: 'woman driver' },
-  { id: 5, name: 'Peter Kamau', vehicle: 'Nissan GT-R', quote: "Finally got my hands on a carbon fiber hood. The quality is excellent and it looks stunning on the car. A bit pricey, but worth it for the look and weight savings.", rating: 4, image: '/images/team/man-leaning-car.png', aiHint: 'man leaning car' },
+  { id: 4, name: 'Fatuma Ali', vehicle: 'Audi S4', quote: "I love the new coilovers. The ride is firm but comfortable, and the car handles like it's on rails. Thanks to the AutoSpark team for the great advice.", rating: 4, image: '/images/team/audi-logo-2016-download.png', aiHint: 'woman driver' },
+  { id: 5, name: 'Peter Kamau', vehicle: 'Nissan GT-R', quote: "Finally got my hands on a carbon fiber hood. The quality is excellent and it looks stunning on the car. A bit pricey, but worth it for the look and weight savings.", rating: 4, image: '/images/team/nissan-logo-2020-black.png', aiHint: 'man leaning car' },
 ];
 
 export const logos = [

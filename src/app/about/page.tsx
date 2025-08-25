@@ -50,7 +50,7 @@ export default function AboutPage() {
         </div>
         <div className="relative h-80 rounded-lg overflow-hidden shadow-2xl">
            <Image
-            src="/images/main/workshop.png"
+            src="/images/main/Workshop.jpg"
             alt="AutoSpark workshop"
             fill
             className="object-cover"

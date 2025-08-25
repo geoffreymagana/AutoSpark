@@ -26,10 +26,16 @@ function LogoMarquee() {
 
   return (
     <div className="relative w-full overflow-hidden bg-primary h-24">
-       <div className="absolute inset-0 bg-repeat-x bg-[length:200%_100%] animate-marquee-rtl" style={{ backgroundImage: `linear-gradient(to right, hsl(var(--accent)) 50%, transparent 50%)` }}></div>
-       <div className="absolute inset-0 flex animate-marquee-infinite">
+      <div className="flex animate-marquee whitespace-nowrap">
         {extendedLogos.map((logo, index) => (
           <div key={index} className="flex-shrink-0 w-48 h-24 flex items-center justify-center mx-8 text-primary-foreground">
+            <logo.src className="w-auto h-10" />
+          </div>
+        ))}
+      </div>
+      <div className="flex absolute top-0 animate-marquee whitespace-nowrap" style={{ animationDelay: "-12.5s" }}>
+        {extendedLogos.map((logo, index) => (
+          <div key={`clone-${index}`} className="flex-shrink-0 w-48 h-24 flex items-center justify-center mx-8 text-primary-foreground">
             <logo.src className="w-auto h-10" />
           </div>
         ))}
@@ -44,7 +50,7 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
         <Image
-          src="/images/main/Car-Engine.png"
+          src="/images/main/car engine.jpg"
           alt="Car Engine"
           fill
           className="absolute z-0 brightness-50 object-cover"
