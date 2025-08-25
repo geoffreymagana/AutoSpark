@@ -95,16 +95,17 @@ export default {
             boxShadow: '0 0 0 10px rgba(37, 211, 102, 0)',
           },
         },
-        'marquee-rtl': {
-          '0%': { backgroundPosition: '0% 0' },
-          '100%': { backgroundPosition: '200% 0' },
+        // Single marquee animation (right to left)
+        'marquee': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' }
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-whatsapp': 'pulse-whatsapp 2s infinite',
-        'marquee-rtl': 'marquee-rtl 25s linear infinite',
+        'marquee': 'marquee 30s linear infinite',
       },
     },
   },

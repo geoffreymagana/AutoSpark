@@ -7,21 +7,21 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
 import ProductBadge from './product-badge';
-import { useCart } from '@/hooks/use-cart';
 import { useToast } from '@/hooks/use-toast';
 import type { Product } from '@/lib/data';
+import { useCartStore } from '@/hooks/use-store';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { addToCart } = useCart();
+  const { addItem } = useCartStore();
   const { toast } = useToast();
   const finalPrice = product.discount > 0 ? product.price * (1 - product.discount / 100) : product.price;
 
   const handleAddToCart = () => {
-    addToCart(product);
+    addItem(product);
     toast({
       title: "Added to cart",
       description: `${product.name} has been added to your cart.`,

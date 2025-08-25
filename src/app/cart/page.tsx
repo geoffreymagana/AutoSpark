@@ -3,19 +3,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCart } from "@/hooks/use-cart";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { Minus, Plus, Trash2, ShoppingCart, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useCartStore } from "@/hooks/use-store";
 
 export default function CartPage() {
-  const { cart, updateQuantity, removeFromCart, clearCart } = useCart();
+  const { items, updateQuantity, removeFromCart, clearCart } = useCartStore();
   const { toast } = useToast();
 
-  const subtotal = cart.reduce((sum, item) => {
+  const subtotal = items.reduce((sum, item) => {
     const finalPrice = item.discount > 0 ? item.price * (1 - item.discount / 100) : item.price;
     return sum + finalPrice * item.quantity;
   }, 0);
@@ -36,7 +36,7 @@ export default function CartPage() {
         </h1>
       </header>
 
-      {cart.length === 0 ? (
+      {items.length === 0 ? (
         <div className="text-center py-16">
           <ShoppingCart className="w-24 h-24 text-neutral-600 mx-auto mb-4" />
           <p className="text-2xl font-bold mb-2">Your cart is empty</p>
@@ -50,34 +50,44 @@ export default function CartPage() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle>Cart Items ({cart.reduce((sum, item) => sum + item.quantity, 0)})</CardTitle>
+                <CardTitle>Cart Items ({items.reduce((sum, item) => sum + item.quantity, 0)})</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="divide-y divide-border/50">
-                  {cart.map((item) => {
+                  {items.map((item) => {
                     const finalPrice = item.discount > 0 ? item.price * (1 - item.discount / 100) : item.price;
                     return (
-                      <li key={item.id} className="flex items-center gap-4 py-4">
-                        <Image src={item.image} alt={item.name} width={100} height={100} className="rounded-md object-cover" />
-                        <div className="flex-grow">
-                          <Link href={`/products/${item.id}`} className="font-semibold hover:text-primary">{item.name}</Link>
-                          <p className="text-sm text-neutral-400">{item.category}</p>
-                          <p className="text-lg font-bold text-primary mt-1">KES {finalPrice.toLocaleString()}</p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity - 1)} disabled={item.quantity <= 1}>
-                            <Minus className="h-4 w-4" />
-                          </Button>
-                          <Input type="number" value={item.quantity} readOnly className="w-16 h-10 text-center" />
-                           <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
-                            <Plus className="h-4 w-4" />
-                          </Button>
-                        </div>
-                        <p className="w-24 text-right font-semibold text-lg">KES {(finalPrice * item.quantity).toLocaleString()}</p>
-                        <Button variant="ghost" size="icon" className="text-destructive hover:text-destructive" onClick={() => removeFromCart(item.id)}>
-                          <Trash2 className="h-5 w-5" />
-                        </Button>
-                      </li>
+                        <li key={item.id} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 py-4">
+                            <Image src={item.image} alt={item.name} width={100} height={100} className="rounded-md object-cover self-center sm:self-auto" />
+                            <div className="flex-grow w-full">
+                                <Link href={`/products/${item.id}`} className="font-semibold hover:text-primary">{item.name}</Link>
+                                <p className="text-sm text-neutral-400">{item.category}</p>
+                                <div className="flex sm:hidden justify-between items-center mt-2">
+                                  <p className="text-lg font-bold text-primary">KES {finalPrice.toLocaleString()}</p>
+                                  <Button variant="ghost" size="icon" className="text-destructive hover:text-destructive -mr-2" onClick={() => removeFromCart(item.id)}>
+                                    <Trash2 className="h-5 w-5" />
+                                  </Button>
+                                </div>
+                            </div>
+                            <div className="flex w-full sm:w-auto items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                    <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity - 1)} disabled={item.quantity <= 1}>
+                                        <Minus className="h-4 w-4" />
+                                    </Button>
+                                    <Input type="number" value={item.quantity} readOnly className="w-16 h-10 text-center" />
+                                    <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
+                                        <Plus className="h-4 w-4" />
+                                    </Button>
+                                </div>
+                                <p className="w-24 text-right font-semibold text-lg sm:hidden">
+                                  KES {(finalPrice * item.quantity).toLocaleString()}
+                                </p>
+                            </div>
+                            <p className="w-24 text-right font-semibold text-lg hidden sm:block">KES {(finalPrice * item.quantity).toLocaleString()}</p>
+                            <Button variant="ghost" size="icon" className="text-destructive hover:text-destructive hidden sm:inline-flex" onClick={() => removeFromCart(item.id)}>
+                                <Trash2 className="h-5 w-5" />
+                            </Button>
+                        </li>
                     );
                   })}
                 </ul>

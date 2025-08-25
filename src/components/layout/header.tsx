@@ -2,14 +2,14 @@
 "use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, ShoppingCart, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from './logo';
 import { cn } from '@/lib/utils';
-import { useCart } from '@/hooks/use-cart';
+import { useCartStore } from '@/hooks/use-store';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '../ui/scroll-area';
 import { SheetDescription } from '../ui/sheet';
@@ -17,9 +17,14 @@ import { SheetDescription } from '../ui/sheet';
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { cart } = useCart();
+  const { items } = useCartStore();
+  const [isClient, setIsClient] = useState(false);
 
-  const cartItemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const cartItemCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -43,7 +48,7 @@ export default function Header() {
            <Button asChild variant="ghost" size="icon" className="relative">
             <Link href="/cart">
               <ShoppingCart className="h-6 w-6" />
-              {cartItemCount > 0 && (
+              {isClient && cartItemCount > 0 && (
                  <Badge variant="destructive" className="absolute -top-1 -right-1 h-5 w-5 justify-center p-0">{cartItemCount}</Badge>
               )}
               <span className="sr-only">Shopping Cart</span>

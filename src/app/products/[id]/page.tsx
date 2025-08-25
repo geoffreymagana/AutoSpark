@@ -12,11 +12,11 @@ import { Separator } from '@/components/ui/separator';
 import { Check, ShoppingCart, ArrowLeft } from 'lucide-react';
 import ProductBadge from '@/components/shared/product-badge';
 import ProductCard from '@/components/shared/product-card';
-import { useCart } from '@/hooks/use-cart';
 import { useToast } from '@/hooks/use-toast';
+import { useCartStore } from '@/hooks/use-store';
 
 export default function ProductDetailPage() {
-  const { addToCart } = useCart();
+  const { addItem } = useCartStore();
   const { toast } = useToast();
   const params = useParams();
   const id = params.id as string;
@@ -28,7 +28,7 @@ export default function ProductDetailPage() {
   }
 
   const handleAddToCart = () => {
-    addToCart(product);
+    addItem(product);
     toast({
       title: "Added to cart",
       description: `${product.name} has been added to your cart.`,

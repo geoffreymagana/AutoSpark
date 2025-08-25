@@ -13,7 +13,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import LogoIpsum1Icon from '@/components/icons/logoipsum-1-icon';
 import LogoIpsum2Icon from '@/components/icons/logoipsum-2-icon';
 import LogoIpsum3Icon from '@/components/icons/logoipsum-3-icon';
@@ -22,20 +21,14 @@ import LogoIpsum5Icon from '@/components/icons/logoipsum-5-icon';
 import LogoIpsum6Icon from '@/components/icons/logoipsum-6-icon';
 
 function LogoMarquee() {
-  const extendedLogos = [...logos, ...logos]; // Duplicate for a seamless loop
+  const extendedLogos = [...logos, ...logos]; // Duplicate for seamless loop
 
   return (
     <div className="relative w-full overflow-hidden bg-primary h-24">
+      {/* Single marquee track moving right to left */}
       <div className="flex animate-marquee whitespace-nowrap">
         {extendedLogos.map((logo, index) => (
           <div key={index} className="flex-shrink-0 w-48 h-24 flex items-center justify-center mx-8 text-primary-foreground">
-            <logo.src className="w-auto h-10" />
-          </div>
-        ))}
-      </div>
-      <div className="flex absolute top-0 animate-marquee-rtl whitespace-nowrap">
-        {extendedLogos.map((logo, index) => (
-          <div key={`clone-${index}`} className="flex-shrink-0 w-48 h-24 flex items-center justify-center mx-8 text-primary-foreground">
             <logo.src className="w-auto h-10" />
           </div>
         ))}
