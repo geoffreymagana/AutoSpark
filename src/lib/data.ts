@@ -96,10 +96,10 @@ export const productCategories = ['All', 'Engine', 'Brakes', 'Tires', 'Suspensio
 
 export const testimonials = [
   { id: 1, name: 'Alex Mwangi', vehicle: 'BMW S1000RR', quote: "The Power Commander tune transformed my bike's performance. The team really knows their stuff when it comes to sport bikes. Highly recommended!", rating: 5, image: '/images/team/bmw-logo-2020-gray-download.png', aiHint: 'happy man' },
-  { id: 2, name: 'Brenda Chepkoech', vehicle: 'Yamaha R1', quote: "Found the perfect Öhlins suspension setup for my R1. The website made it easy to find exactly what I needed, and shipping was super fast!", rating: 5, image: '/images/team/toyota-logo-2020-europe-download.png', aiHint: 'smiling woman' },
-  { id: 3, name: 'David Ochieng', vehicle: 'Ducati Panigale V4', quote: "The Akrapovič exhaust system is amazing! The team helped me choose the perfect setup and the sound is incredible. My Panigale has never felt better!", rating: 5, image: '/images/team/porsche.png', aiHint: 'man with bike' },
-  { id: 4, name: 'Fatuma Ali', vehicle: 'Kawasaki Ninja ZX-6R', quote: "The new brake setup has given me so much more confidence in the corners. The team's advice was spot-on for what I needed.", rating: 4, image: '/images/team/nissan-logo-2020-black.png', aiHint: 'woman rider' },
-  { id: 5, name: 'Peter Kamau', vehicle: 'KTM 1290 Super Duke', quote: "The carbon fiber fairings are top quality and the fitment is perfect. Definitely worth the investment for both looks and performance.", rating: 4, image: '/images/team/subaru-logo-2019-download.png', aiHint: 'man with motorcycle' },
+  { id: 2, name: 'Brenda Chepkoech', vehicle: 'Yamaha R1', quote: "Found the perfect Öhlins suspension setup for my R1. The website made it easy to find exactly what I needed, and shipping was super fast!", rating: 5, image: '/images/team/Yamaha R1.png', aiHint: 'smiling woman' },
+  { id: 3, name: 'David Ochieng', vehicle: 'Ducati Panigale V4', quote: "The Akrapovič exhaust system is amazing! The team helped me choose the perfect setup and the sound is incredible. My Panigale has never felt better!", rating: 5, image: '/images/team/Ducati.png', aiHint: 'man with bike' },
+  { id: 4, name: 'Fatuma Ali', vehicle: 'Kawasaki Ninja ZX-6R', quote: "The new brake setup has given me so much more confidence in the corners. The team's advice was spot-on for what I needed.", rating: 4, image: '/images/team/Kawasaki Ninja.png', aiHint: 'woman rider' },
+  { id: 5, name: 'Peter Kamau', vehicle: 'KTM 1290 Super Duke', quote: "The carbon fiber fairings are top quality and the fitment is perfect. Definitely worth the investment for both looks and performance.", rating: 4, image: '/images/team/KTM Super Duke.png', aiHint: 'man with motorcycle' },
 ];
 
 export const logos = [
