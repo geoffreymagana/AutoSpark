@@ -3,9 +3,9 @@ import './globals.css';
 import { ClientProviders } from './client-providers';
 
 export const metadata: Metadata = {
-  title: 'AutoSpark - Your Auto Parts Specialist',
+  title: 'MotoSpark - Your Auto Parts Specialist',
   description: 'High-quality auto spare parts and expert vehicle services.',
-  applicationName: 'AutoSpark',
+  applicationName: 'MotoSpark',
   keywords: ['auto parts', 'car repair', 'vehicle services', 'spare parts'],
 };
 

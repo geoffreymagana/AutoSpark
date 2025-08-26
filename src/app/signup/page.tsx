@@ -21,7 +21,7 @@ export default function SignupPage() {
             <Logo />
           </div>
           <CardTitle className="text-2xl">Create an Account</CardTitle>
-          <CardDescription>Join the AutoSpark community to get started.</CardDescription>
+          <CardDescription>Join the MotoSpark community to get started.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">

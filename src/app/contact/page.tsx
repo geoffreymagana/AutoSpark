@@ -80,14 +80,14 @@ export default function ContactPage() {
                 <div className="space-y-4 text-lg">
                     <p className="flex items-start gap-4"><MapPin className="h-6 w-6 text-primary mt-1 shrink-0" /><span>123 Ngong Road, Nairobi, Kenya</span></p>
                     <p className="flex items-center gap-4"><Phone className="h-6 w-6 text-primary" /><span>+254 712 345 678</span></p>
-                    <p className="flex items-center gap-4"><Mail className="h-6 w-6 text-primary" /><span>contact@autospark.co.ke</span></p>
+                    <p className="flex items-center gap-4"><Mail className="h-6 w-6 text-primary" /><span>contact@MotoSpark.co.ke</span></p>
                     <p className="flex items-start gap-4"><Clock className="h-6 w-6 text-primary mt-1 shrink-0" /><span><strong>Mon-Fri:</strong> 9:00 AM - 6:00 PM<br/><strong>Sat:</strong> 10:00 AM - 4:00 PM</span></p>
                 </div>
             </div>
              <div>
                 <h2 className="text-3xl font-bold mb-6">Our Location</h2>
                 <div className="relative aspect-video w-full rounded-md overflow-hidden border-2 border-primary/50">
-                    <Image src="/images/map/kenya map.png" width={800} height={450} alt="Map to AutoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
+                    <Image src="/images/map/kenya map.png" width={800} height={450} alt="Map to MotoSpark" className="w-full h-full object-cover" data-ai-hint="city map" />
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger asChild>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                           className="p-0 border-primary bg-background/80 backdrop-blur-sm"
                         >
                           <div className="w-64 text-center">
-                            <Image src="/images/main/headquarters.jpg" width={600} height={400} alt="AutoSpark Shop HeadQuarters" className="w-full h-auto rounded-t-md" data-ai-hint="white suv" />
+                            <Image src="/images/main/BikeHeadquarters.png" width={600} height={400} alt="MotoSpark Shop HeadQuarters" className="w-full h-auto rounded-t-md" data-ai-hint="white suv" />
                             <div className="p-4">
                               <div className="flex justify-center mb-2">
                                   {[...Array(5)].map((_, i) => (

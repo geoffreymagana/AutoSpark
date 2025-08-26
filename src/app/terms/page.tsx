@@ -44,21 +44,21 @@ function TermsAndConditionsContent() {
         </header>
 
         <div className="terms-content prose prose-invert prose-lg mx-auto text-neutral-300 prose-h2:text-primary prose-h2:font-bold prose-a:text-primary prose-a:underline hover:prose-a:text-primary">
-          <p>Welcome to AutoSpark!</p>
+          <p>Welcome to MotoSpark!</p>
           
           <p>
-            These terms and conditions outline the rules and regulations for the use of AutoSpark's Website, located at{' '}
+            These terms and conditions outline the rules and regulations for the use of MotoSpark's Website, located at{' '}
             <Link href="/">https://auto-spark.vercel.app/</Link>.
           </p>
           
           <p>
-            By accessing this website we assume you accept these terms and conditions. Do not continue to use AutoSpark if you do not agree to take all of the terms and conditions stated on this page.
+            By accessing this website we assume you accept these terms and conditions. Do not continue to use MotoSpark if you do not agree to take all of the terms and conditions stated on this page.
           </p>
 
           <h2>Cookies</h2>
           
           <p>
-            We employ the use of cookies. By accessing AutoSpark, you agreed to use cookies in agreement with the AutoSpark's{' '}
+            We employ the use of cookies. By accessing MotoSpark, you agreed to use cookies in agreement with the MotoSpark's{' '}
             <Link href="/privacy">Privacy Policy</Link>.
           </p>
           
@@ -69,16 +69,16 @@ function TermsAndConditionsContent() {
           <h2>License</h2>
           
           <p>
-            Unless otherwise stated, AutoSpark and/or its licensors own the intellectual property rights for all material on AutoSpark. All intellectual property rights are reserved. You may access this from AutoSpark for your own personal use subjected to restrictions set in these terms and conditions.
+            Unless otherwise stated, MotoSpark and/or its licensors own the intellectual property rights for all material on MotoSpark. All intellectual property rights are reserved. You may access this from MotoSpark for your own personal use subjected to restrictions set in these terms and conditions.
           </p>
           
           <p>You must not:</p>
           
           <ul>
-            <li>Republish material from AutoSpark</li>
-            <li>Sell, rent or sub-license material from AutoSpark</li>
-            <li>Reproduce, duplicate or copy material from AutoSpark</li>
-            <li>Redistribute content from AutoSpark</li>
+            <li>Republish material from MotoSpark</li>
+            <li>Sell, rent or sub-license material from MotoSpark</li>
+            <li>Reproduce, duplicate or copy material from MotoSpark</li>
+            <li>Redistribute content from MotoSpark</li>
           </ul>
 
           <h2>Disclaimer</h2>

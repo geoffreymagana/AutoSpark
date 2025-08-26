@@ -34,7 +34,7 @@ export default function AboutPage() {
           Fueled by Passion
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-neutral-300">
-          Discover the story behind AutoSpark and the team dedicated to your vehicle's performance.
+          Discover the story behind MotoSpark and the team dedicated to your motorcycle's performance.
         </p>
       </header>
 
@@ -42,19 +42,19 @@ export default function AboutPage() {
         <div>
           <h2 className="text-3xl font-bold mb-4">Our Story</h2>
           <p className="text-neutral-300 mb-4">
-            Founded in 2010 by a group of passionate automotive enthusiasts, AutoSpark was born from a desire to provide top-tier parts and unparalleled service. We started in a small garage, fueled by late nights and a love for everything with four wheels.
+            Founded in 2010 by a group of passionate motorcycle enthusiasts, MotoSpark was born from a desire to provide top-tier parts and unparalleled service. We started in a small workshop, fueled by late nights and a love for everything on two wheels.
           </p>
           <p className="text-neutral-300">
-            Today, we've grown into a leading destination for car lovers, but our core values remain unchanged: quality, expertise, and a commitment to helping our customers achieve their automotive dreams.
+            Today, we've grown into a leading destination for riders, but our core values remain unchanged: quality, expertise, and a commitment to helping our customers achieve their motorcycling dreams.
           </p>
         </div>
         <div className="relative h-80 rounded-lg overflow-hidden shadow-2xl">
            <Image
             src="/images/main/Workshop.jpg"
-            alt="AutoSpark workshop"
+            alt="MotoSpark workshop"
             fill
             className="object-cover"
-            data-ai-hint="car workshop"
+            data-ai-hint="Bike workshop"
           />
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function AboutPage() {
               <CardTitle className="text-2xl">Our Mission</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-neutral-300">To empower automotive enthusiasts by providing access to the highest quality parts, expert knowledge, and exceptional service, helping them unlock the ultimate performance and potential of their vehicles.</p>
+              <p className="text-neutral-300">To empower motorcycle enthusiasts by providing access to the highest quality parts, expert knowledge, and exceptional service, helping them unlock the ultimate performance and potential of their bikes.</p>
             </CardContent>
           </Card>
           <Card className="border-2 border-border/50">
@@ -75,7 +75,7 @@ export default function AboutPage() {
               <CardTitle className="text-2xl">Our Vision</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-neutral-300">To be the most trusted and respected name in the automotive aftermarket industry, building a global community of passionate drivers who rely on AutoSpark for all their performance needs.</p>
+              <p className="text-neutral-300">To be the most trusted and respected name in the motorcycle aftermarket industry, building a global community of passionate riders who rely on MotoSpark for all their performance needs.</p>
             </CardContent>
           </Card>
       </section>
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold uppercase text-primary font-headline">Meet the Crew</h2>
           <p className="mt-2 max-w-2xl mx-auto text-neutral-400">
-            The experts behind the counter and under the hood.
+            The experts who keep your bike at peak performance.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

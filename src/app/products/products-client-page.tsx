@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useMemo } from 'react';
-import { products, carMakes, carModels, productCategories } from '@/lib/data';
+import { products, bikeMakes, bikeModels, productCategories } from '@/lib/data';
 import ProductCard from '@/components/shared/product-card';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -18,7 +18,7 @@ export default function ProductsClientPage() {
   const [selectedModel, setSelectedModel] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
 
-  const availableModels = useMemo(() => carModels[selectedMake as keyof typeof carModels] || ['All'], [selectedMake]);
+  const availableModels = useMemo(() => bikeModels[selectedMake as keyof typeof bikeModels] || ['All'], [selectedMake]);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
@@ -42,7 +42,7 @@ export default function ProductsClientPage() {
           Parts Catalog
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-neutral-300">
-          Find the perfect high-performance parts for your vehicle.
+          Find the perfect high-performance parts for your motorcycle.
         </p>
       </header>
 
@@ -60,7 +60,7 @@ export default function ProductsClientPage() {
           <Select value={selectedMake} onValueChange={handleMakeChange}>
             <SelectTrigger><SelectValue placeholder="Select Make" /></SelectTrigger>
             <SelectContent>
-              {carMakes.map(make => <SelectItem key={make} value={make}>{make}</SelectItem>)}
+              {bikeMakes.map(make => <SelectItem key={make} value={make}>{make}</SelectItem>)}
             </SelectContent>
           </Select>
           <Select value={selectedModel} onValueChange={setSelectedModel} disabled={selectedMake === 'All'}>

@@ -5,7 +5,7 @@ import WhatsAppIcon from '../icons/whatsapp-icon';
 
 export default function WhatsAppFAB() {
     const phoneNumber = "+254712345678";
-    const message = "Hello AutoSpark! I'd like to inquire about a part.";
+    const message = "Hello MotoSpark! I'd like to inquire about a part.";
 
     return (
         <Link 

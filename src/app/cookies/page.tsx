@@ -35,8 +35,8 @@ function CookiePolicyContent() {
 
         <div className="cookie-content prose prose-invert prose-lg mx-auto text-neutral-300 prose-h2:text-primary prose-h2:font-bold prose-a:text-primary prose-a:underline hover:prose-a:text-primary">
           <p>
-            This is the Cookie Policy for AutoSpark, accessible from{" "}
-            <Link href="/">https://auto-spark.vercel.app/</Link>.
+            This is the Cookie Policy for MotoSpark, accessible from{" "}
+            <Link href="/">https://moto-spark.vercel.app/</Link>.
           </p>
 
           <h2>What Are Cookies</h2>
@@ -128,8 +128,8 @@ function CookiePolicyContent() {
 
           <p>
             Email:{" "}
-            <Link href="mailto:contact@autospark.co.ke">
-              contact@autospark.co.ke
+            <Link href="mailto:contact@motospark.co.ke">
+              contact@motospark.co.ke
             </Link>
           </p>
         </div>

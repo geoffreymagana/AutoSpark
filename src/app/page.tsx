@@ -44,17 +44,17 @@ export default function Home() {
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
         <Image
           src="/images/main/car engine.jpg"
-          alt="Car Engine"
+          alt="Motorcycle Engine"
           fill
           className="absolute z-0 brightness-50 object-cover"
-          data-ai-hint="car engine"
+          data-ai-hint="motorcycle engine"
         />
         <div className="relative z-10 p-4">
           <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter font-headline">
             Unleash Peak Performance
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-neutral-300">
-            Your ultimate source for premium auto parts and expert car services. We fuel your passion for driving.
+            Your ultimate source for premium motorcycle parts and expert bike services. We fuel your passion for riding.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg" className="font-bold text-lg text-white">
@@ -67,12 +67,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-8 bg-card/20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Trustpilot Rating */}
+            <div className="flex items-center justify-center gap-6 p-6 bg-card/50 rounded-lg">
+              <div className="flex flex-col items-center">
+                <div className="flex mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`w-6 h-6 ${i < 5 ? 'text-[#00b67a] fill-[#00b67a]' : 'text-neutral-600'}`} />
+                  ))}
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold">4.9</div>
+                  <div className="text-sm text-neutral-400">on Trustpilot</div>
+                </div>
+              </div>
+            </div>
+            {/* Google Business Rating */}
+            <div className="flex items-center justify-center gap-6 p-6 bg-card/50 rounded-lg">
+              <div className="flex flex-col items-center">
+                <div className="flex mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`w-6 h-6 ${i < 5 ? 'text-[#fbbc05] fill-[#fbbc05]' : 'text-neutral-600'}`} />
+                  ))}
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold">4.5</div>
+                  <div className="text-sm text-neutral-400">on Google Business</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold uppercase text-primary font-headline">Our Services</h2>
             <p className="mt-2 max-w-2xl mx-auto text-neutral-400">
-              Expert care for your vehicle, from routine maintenance to performance upgrades.
+              Expert care for your motorcycle, from track day preparation to street performance upgrades.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -107,7 +142,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold uppercase text-primary font-headline">Featured Products</h2>
             <p className="mt-2 max-w-2xl mx-auto text-neutral-400">
-              Top-quality parts to boost your vehicle's performance and reliability.
+              Premium parts to enhance your motorcycle's performance and style.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -128,7 +163,7 @@ export default function Home() {
            <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold uppercase text-primary font-headline">Rave Reviews</h2>
             <p className="mt-2 max-w-2xl mx-auto text-neutral-400">
-              See what our satisfied customers have to say about their AutoSpark experience.
+              See what our satisfied customers have to say about their MotoSpark experience.
             </p>
           </div>
           <Carousel

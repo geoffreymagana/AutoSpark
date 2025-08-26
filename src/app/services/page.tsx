@@ -6,10 +6,10 @@ export default function ServicesPage() {
     <div className="container mx-auto px-4 py-16 md:py-24">
       <header className="text-center mb-16">
         <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter font-headline text-primary">
-          Expert Vehicle Services
+          Expert Motorcycle Services
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-neutral-300">
-          From routine maintenance to high-performance tuning, our certified technicians have you covered.
+          From track day preparation to daily maintenance, our expert technicians keep your bike performing at its best.
         </p>
       </header>
 

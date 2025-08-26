@@ -79,13 +79,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span>contact@autospark.co.ke</span>
+                <span>contact@motospark.co.ke</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-neutral-500">
-          <p>&copy; {new Date().getFullYear()} AutoSpark. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MotoSpark. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

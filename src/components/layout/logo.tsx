@@ -1,12 +1,16 @@
 import Link from 'next/link';
-import { Cog } from 'lucide-react';
-
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2" aria-label="AutoSpark Home">
-      <Cog className="h-8 w-8 text-primary animate-spin" style={{ animationDuration: '5s' }} />
+    <Link href="/" className="flex items-center gap-2" aria-label="MotoSpark Home">
+      <img 
+        width="32" 
+        height="32" 
+        src="https://img.icons8.com/stencil/32/motorbike-helmet.png" 
+        alt="motorbike-helmet"
+        className="text-primary"
+      />
       <span className="text-2xl font-black tracking-tighter uppercase font-headline">
-        AutoSpark
+        MotoSpark
       </span>
     </Link>
   );
