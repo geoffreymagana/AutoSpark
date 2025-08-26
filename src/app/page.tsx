@@ -43,7 +43,7 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
         <Image
-          src="/images/main/car engine.jpg"
+          src="/images/main/Motorcycle Engine.jpg"
           alt="Motorcycle Engine"
           fill
           className="absolute z-0 brightness-50 object-cover"
